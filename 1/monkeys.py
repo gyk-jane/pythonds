@@ -53,9 +53,11 @@ def callString(randomStr, goalStr, length):
     """
     count = 0
     prevScore = -1
-    prevStr = ''
     highScore = -1
     highScoreDict = dict()
+    
+    if count == 0: prevStr = randomStr
+    
     while (not(scoreString(randomStr, goalStr))):
         score = 0
         for i,j in zip(randomStr, goalStr):
@@ -87,4 +89,4 @@ def callString(randomStr, goalStr, length):
     print("\n")
     print ("FINALLY! It took {count} attempts to get the goal string, {goalStr}.".format(count=count, goalStr=goalStr))
     
-callString(generateString(4), "four", 4)
+callString(generateString(2), "kk", 2)
